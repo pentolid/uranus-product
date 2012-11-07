@@ -24,6 +24,7 @@ public class urDatabase {
 	private ResultSet rs = null; // Result set of executed statement (handles data from database)
 	private ResultSetMetaData rsMetaData = null; // Meta data of result set (gives information about Result Set i.e: CoulumnCount, ColoumnName etc.)
 
+	public urDatabase(){}
 	/*
 	 * ######################################################################
 	 * 
