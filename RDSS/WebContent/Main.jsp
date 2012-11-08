@@ -1,21 +1,25 @@
-<%@page import="mainPackage.urMain"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<%@page import mainPackage.urMain %>
+<%-- <%@ page import="main.*" %> --%>
 
+<HTML>
+<HEAD>
+<TITLE>RDSS</TITLE>
+</HEAD>
+<BODY>
+ 	
+<%-- <%@ include file="d.jsp" %> --%>
+	
+	<%!
 
-<% urMain main = new urMain(); %>
-  
+// 		urMain m = new urMain();
+	%>
 
+	<FORM name="input" action="ReadBoxes.jsp" method="get">
+		<INPUT TYPE="CHECKBOX" NAME="check1" VALUE="check1" CHECKED>
+		Checkbox 1 <BR> <INPUT TYPE="CHECKBOX" NAME="check2"
+			VALUE="check2"> Checkbox 2 <BR> <INPUT TYPE="CHECKBOX"
+			NAME="check3" VALUE="check3"> Checkbox 3 <BR> <INPUT
+			TYPE="SUBMIT" VALUE="Submit">
+	</FORM>
 
-
-troloor
-</body>
-</html>
+</BODY>
+</HTML>
