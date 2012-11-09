@@ -34,8 +34,9 @@ public class urDatabase {
 	 * Created by: Nico Boh Creation date: 2012-11-06
 	 * ######################################################################
 	 */
-	public void connect() {
-
+	
+	public boolean connect() {
+		
 		// find database driver
 		try {
 			// Class.forName("com.mysql.jdbc.Driver"); // MySQL Driver
@@ -43,6 +44,7 @@ public class urDatabase {
 			System.out.println("Database driver found...");
 		} catch (ClassNotFoundException e) {
 			System.out.println("Couldn't find driver class: " + e.getMessage());
+			return false; // edited by Oskar Nyberg, 2012-11-09
 		}
 		// connect to database
 		try {
@@ -53,13 +55,17 @@ public class urDatabase {
 		} catch (SQLException se) {
 			System.out.println("Couldn't connect to database: ");
 			System.out.println(se.getMessage());
-			// System.exit(1);
+			return false;
 		}
 		// check if database is connected (conn cannot be null)
-		if (conn != null)
+		if (conn != null) {
 			System.out.println("Database connected...");
-		else
-			System.out.println("We should never get here.");
+		return true; 
+		}
+
+		System.out.println("We should never get here.");
+		return false;
+			
 	}
 
 	/*
