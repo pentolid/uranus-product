@@ -1,25 +1,46 @@
 <%-- <%@ page import="main.*" %> --%>
 
 <HTML>
+
 <HEAD>
 <TITLE>RDSS</TITLE>
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
 </HEAD>
-<BODY>
- 	
-<%-- <%@ include file="d.jsp" %> --%>
-	
-	<%!
+<body> 
 
-// 		urMain m = new urMain();
-	%>
-
-	<FORM name="input" action="ReadBoxes.jsp" method="get">
+<div id="main">  
+ 
+<div id="head">  
+<h>Food Finder Lindholmen</h>
+</div> 
+ 
+<!-- content-->
+<div id="content">  
+ 	<FORM name="input" action="ReadBoxes.jsp" method="get">
 		<INPUT TYPE="CHECKBOX" NAME="check1" VALUE="check1" CHECKED>
 		Checkbox 1 <BR> <INPUT TYPE="CHECKBOX" NAME="check2"
 			VALUE="check2"> Checkbox 2 <BR> <INPUT TYPE="CHECKBOX"
 			NAME="check3" VALUE="check3"> Checkbox 3 <BR> <INPUT
 			TYPE="SUBMIT" VALUE="Submit">
 	</FORM>
+
+<div id="ram">
+		<div id="map">MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP  MAP MAP MAP MAP  MAP MAP MAP MAP  MAP MAP MAP MAP  MAP MAP MAP MAP  MAP MAP MAP MAP  MAP MAP MAP MAP  MAP MAP MAP MAP  MAP MAP MAP MAP  MAP MAP MAP MAP </div>
+<div>
+
+<div id="ram"><h2>Restaurang 1</h2>arigjaogijhaorgjaw TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO</div>
+<div id="ram"><h2>Restaurang 2</h2>arigjaogijhaorgjaw TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO</div>
+<div id="ram"><h2>Restaurang 3</h2>arigjaogijhaorgjaw TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO TROOLOOLLOLOLOLO</div>
+<div id="ram"><h2>Restaurang 4</h2></div> 
+ 
+<!-- copyright --> 
+<div id="ram"><mi>&copy Ur Anus </div>
+
+<!--end of content-->
+</div>
+ 
+<!-- end of main-->
+</div > 
 
 </BODY>
 </HTML>

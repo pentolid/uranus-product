@@ -10,17 +10,12 @@ public urDbQueries (urDatabase dbs) {
 	db = dbs;
 }
 	
-void check () {
-	
+void check () {	
 	for (urSelectable s : urSelectable.arlSelectables) {
 		if (s.isSelected()) {
 			trueArl.add(s);
 		}
-	}
-	for ()
 		
 	}
-	
-	
 }
-
+}
