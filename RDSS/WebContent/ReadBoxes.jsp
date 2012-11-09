@@ -13,6 +13,7 @@
         <%
             if(request.getParameter("check1") != null) {
             	//selection.foods.Fish.select();
+          		
             	out.println("Checkbox 1 was checked.<BR>");
             }
             else {

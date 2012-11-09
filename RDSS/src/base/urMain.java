@@ -1,7 +1,10 @@
-package main;
+package base;
 
-public class urMain {
+class urUser{
+	urSelectable lastSelection;
 	
+}
+public class urMain {
 	
 	private urDatabase dataBase=new urDatabase();
 //	private urSelection selection=new urSelection();
