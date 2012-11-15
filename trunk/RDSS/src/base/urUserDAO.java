@@ -31,18 +31,18 @@ public class urUserDAO {
 	 */
 	public static urUserBeans login(urUserBeans bean) {
 		// preparing some objects for connection
-		String username = bean.getUsername();
-		String password = bean.getPassword();
-		String searchQuery = "select * from users where username='" + username
-				+ "' AND password='" + password + "'"; // "System.out.println"
+		String usr = bean.getUsername();
+		String pw = bean.getPassword();
+		String searchQuery = "select * from users where username='" + usr
+				+ "' AND password='" + pw + "'"; // "System.out.println"
 														// prints in the
 														// console; Normally
 														// used to trace the
 														// process
-		System.out.println("Your user name is " + username);
-		System.out.println("Your password is " + password);
-		System.out.println("Query: " + searchQuery);
-
+		System.out.println("Your user name is " + usr); //delete in final version
+		System.out.println("Your password is " + pw);   // delete in final version
+		System.out.println("Query: " + searchQuery);	// delete in final version
+		
 		try {
 			// connect to DB
 			udb.connect();
@@ -66,7 +66,7 @@ public class urUserDAO {
 		} catch (Exception ex) {
 			System.out.println("Log In failed: An Exception has occurred! "
 					+ ex);
-		} // some exception handling finally
+		} 
 		{
 			if (udb.getRs() != null) {
 				try {
@@ -75,13 +75,6 @@ public class urUserDAO {
 				}
 
 			}
-//			if (urDatabase.conn != null) {
-//				try {
-//					urDatabase.conn.close();
-//				} catch (Exception e) {
-//				}
-//				urDatabase.conn = null;
-//			}
 		}
 		return bean;
 	}
