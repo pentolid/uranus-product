@@ -35,8 +35,11 @@ public class urLogServlet extends HttpServlet {
 		try {
 			
 			urUserBeans user = new urUserBeans();
-			
-			user.setUserName(request.getParameter("username"));
+			/*
+			 *  Takes the login id submitted by the user in the .jsp file where the login is located.
+			 *  These id's are: "username" and "password".
+			 */
+			user.setUserName(request.getParameter("username"));	
 			user.setPassword(request.getParameter("password"));
 			
 			user = urUserDAO.login(user);
