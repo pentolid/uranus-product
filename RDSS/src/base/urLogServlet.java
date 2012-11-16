@@ -34,7 +34,7 @@ public class urLogServlet extends HttpServlet {
 		System.out.println ("hej");
 		try {
 			
-			urUserBeans user = new urUserBeans();
+			 urUserBeans user = new urUserBeans();
 			/*
 			 *  Takes the login id submitted by the user in the .jsp file where the login is located.
 			 *  These id's are: "username" and "password".
@@ -45,9 +45,9 @@ public class urLogServlet extends HttpServlet {
 			user = urUserDAO.login(user);
 			if (user.isValid()) { // Correct credentials will be processed here:
 				System.out.println ("BRA");
-				 HttpSession session = request.getSession(true);
+				 HttpSession session = request.getSession();
 				session.setAttribute("currentSessionUser", user);
-				// response.sendRedirect("userLogged.jsp");  
+				 response.sendRedirect("Main.jsp");  
 				
 			} else //invalid credentials will be processed here:
 				System.out.println ("NEJ");

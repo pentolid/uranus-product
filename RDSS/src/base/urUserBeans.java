@@ -19,7 +19,8 @@ public class urUserBeans {
 	private String firstName;
 	private String lastName;
 	public boolean valid;
-
+	public urSelection selection;
+	
 	public String getFirstName() {
 		return firstName;
 	}
