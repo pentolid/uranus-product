@@ -49,9 +49,9 @@ public class urDatabase {
 		// connect to database
 		try {
 			// MySQL Connection
-			//conn = DriverManager.getConnection("jdbc:mysql://localhost/database name", "Username","Password");
+			 // conn = DriverManager.getConnection("jdbc:mysql://localhost/db.sql", "root","123");
 			// SQLite Connection
-			conn = DriverManager.getConnection("jdbc:sqlite:D:\\dbTest.db");
+			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Todai\\Desktop\\Schoolwork\\JSPwiki\\urJJ\\pwd.db");
 		} catch (SQLException se) {
 			System.out.println("Couldn't connect to database: ");
 			System.out.println(se.getMessage());
