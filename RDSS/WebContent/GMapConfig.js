@@ -20,7 +20,6 @@ function loadXML(fileName) {
 	try {
 		xmlDoc.async = false;
 		xmlDoc.load(fileName);
-		alert("using XMLDOM");
 		return (xmlDoc);
 	} catch (e) {
 		// WebKit (Safari, Chrome) - AJAX fallback
@@ -31,7 +30,6 @@ function loadXML(fileName) {
 			xmlDoc = xhr.responseXML;
 			if (!xmlDoc)
 				return (false);
-			aler("using HTTPRequest");
 			return (xmlDoc);
 		} catch (e) {
 			alert("Cannot instantiate XMLDOM object\n\nError:\n" + e.message);
@@ -40,7 +38,7 @@ function loadXML(fileName) {
 	}
 }
 
-function initialize() {
+function initializeMap() {
 	geocoder = new google.maps.Geocoder();
 
 	var mapOptions = {
@@ -49,6 +47,8 @@ function initialize() {
 		mapTypeId : google.maps.MapTypeId.ROADMAP
 	};
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	loadXML('restaurants.xml');
+	geocode();
 }
 
 function geocode() {
