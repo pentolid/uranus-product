@@ -33,13 +33,13 @@
 				</FORM>
 
 				<div id="ram">
-					<div id="map" style="width: 480px; height: 480px;"></div>
+					<div id="map" style="width: 625px; height: 440px;"></div>
 
 					<!-- end of main-->
 				</div>
 				<form action="LoginServlet">
-					Please enter your username <input type="text" name="username" /><br>
-					Please enter your password <input type="password" name="password" />
+					Username: <input type="text" name="username" />
+					Password: <input type="password" name="password" />
 					<input type="submit" value="submit">
 				</form>
 				<%

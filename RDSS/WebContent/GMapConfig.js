@@ -57,14 +57,12 @@ function geocode() {
 	var marker = xmlDoc.getElementsByTagName("markers")[0];
 
 	for ( var i = 0; i <= childNodes.length; i++) {
-		address = marker.childNodes[i].getAttribute("rStreet");
 		address = marker.childNodes[i].getAttribute("rStreet") + " "
 				+ marker.childNodes[i].getAttribute("rStreetNumber")
 				+ ", Gothenburg";
 		info = marker.childNodes[i].getAttribute("rInfo");
 		titel = marker.childNodes[i].getAttribute("rName");
-		// alert(address + "/" + info + "/" + titel);
-
+		
 		geocoder.geocode({
 			'address' : address
 		}, function(results, status) {
@@ -75,6 +73,8 @@ function geocode() {
 					position : results[0].geometry.location,
 					titel : titel
 				});
+				 alert(address + "/" + info + "/" + titel);
+
 				var infoWindowOptions = {
 					content : '<h3>' + titel + '</h3>' + info
 				};
