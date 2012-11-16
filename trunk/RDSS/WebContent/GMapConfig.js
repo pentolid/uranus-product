@@ -73,7 +73,7 @@ function geocode() {
 					position : results[0].geometry.location,
 					titel : titel
 				});
-				 alert(address + "/" + info + "/" + titel);
+				 //alert(address + "/" + info + "/" + titel);
 
 				var infoWindowOptions = {
 					content : '<h3>' + titel + '</h3>' + info
