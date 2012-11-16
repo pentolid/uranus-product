@@ -13,7 +13,7 @@ import org.w3c.dom.*;
 public class urDomXML {
 
 	public void testXML() throws DOMException, SQLException {
-		database myDatabase = new database();
+		urDatabase myDatabase = new urDatabase();
 		myDatabase.connect();
 		myDatabase
 				.createStatement("SELECT rName, rStreet, rStreetNumber, rInfo FROM tblRestaurants;");
