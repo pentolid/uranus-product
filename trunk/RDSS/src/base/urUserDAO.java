@@ -1,4 +1,5 @@
 package base;
+
 /*
  * ##########################################################################
  * +++urUserDAO+++
@@ -14,15 +15,18 @@ package base;
  * ##########################################################################
  */
 public class urUserDAO {
- static urDatabase udb = new urDatabase();
- /*
+	static urDatabase udb = new urDatabase();
+
+	/*
 	 * ######################################################################
 	 * 
-	 * Description: Invoked by the LogServlet with the information submited by the user. 
+	 * Description: Invoked by the LogServlet with the information submited by
+	 * the user.
 	 * 
 	 * --
 	 * 
-	 * The submited data is sent as a query to the database to confirm that the user is created. 
+	 * The submited data is sent as a query to the database to confirm that the
+	 * user is created.
 	 * 
 	 * --
 	 * 
@@ -34,18 +38,18 @@ public class urUserDAO {
 		String usr = bean.getUsername();
 		String pw = bean.getPassword();
 		String searchQuery = "select * from users where username='" + usr
-				+ "' AND password='" + pw + "'"; // "System.out.println"
-														// prints in the
-														// console; Normally
-														// used to trace the
-														// process
-		System.out.println("Your user name is " + usr); //delete in final version
-		System.out.println("Your password is " + pw);   // delete in final version
-		System.out.println("Query: " + searchQuery);	// delete in final version
-		
+				+ "' AND password='" + pw + "'";
+		System.out.println("Your user name is " + usr); // delete in final
+														// version
+
+		System.out.println("Your password is " + pw); // delete in final version
+		System.out.println("Query: " + searchQuery); // delete in final version
+
 		try {
 			// connect to DB
+
 			udb.connect();
+
 			udb.createStatement(searchQuery);
 			boolean more = udb.getRs().next(); // if user does not exist set the
 												// isValid
@@ -56,17 +60,18 @@ public class urUserDAO {
 				bean.setValid(false);
 			} // if user exists set the isValid variable to true
 			else if (more) {
-				String firstName = udb.getRs().getString("FirstName");
-				String lastName = udb.getRs().getString("LastName");
-				System.out.println("Welcome " + firstName);
+				String firstName = udb.getRs().getString("firstName");
+				String lastName = udb.getRs().getString("lastName");
+				
 				bean.setFirstName(firstName);
 				bean.setLastName(lastName);
+				System.out.println("Welcome " + firstName + " " + lastName);
 				bean.setValid(true);
 			}
 		} catch (Exception ex) {
 			System.out.println("Log In failed: An Exception has occurred! "
 					+ ex);
-		} 
+		}
 		{
 			if (udb.getRs() != null) {
 				try {

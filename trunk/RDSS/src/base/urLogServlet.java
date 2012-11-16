@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/** * Servlet implementation class LoginServlet */
+/** * Servlet implementation class urLogServlet */
 @SuppressWarnings("serial")
 @WebServlet("/LoginServlet")
 /*
@@ -31,7 +31,7 @@ public class urLogServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
-
+		System.out.println ("hej");
 		try {
 			
 			urUserBeans user = new urUserBeans();
@@ -44,12 +44,14 @@ public class urLogServlet extends HttpServlet {
 			
 			user = urUserDAO.login(user);
 			if (user.isValid()) { // Correct credentials will be processed here:
+				System.out.println ("BRA");
 				 HttpSession session = request.getSession(true);
 				session.setAttribute("currentSessionUser", user);
-				response.sendRedirect("userLogged.jsp");  
-			} else //invalid credentials will be processed here:
+				// response.sendRedirect("userLogged.jsp");  
 				
-				response.sendRedirect("invalidLogin.jsp");
+			} else //invalid credentials will be processed here:
+				System.out.println ("NEJ");
+				//response.sendRedirect("invalidLogin.jsp");
 			
 		} catch (Throwable theException) {
 			System.out.println(theException);
