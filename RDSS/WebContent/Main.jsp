@@ -6,15 +6,14 @@
 
 <TITLE>RDSS</TITLE>
 <LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+<!-- Google Maps API - Java Script Source -->
+<script type="text/javascript"
+	src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBNopqBwFCC2CZdkpPVylS1mn5AQeHj9EM&sensor=false"></script>
+<script type="text/javascript" src="GMapConfig.js"></script>
+
 </HEAD>
 
-<body>
-
-
-
-
-
-
+<body onload="initializeMap()">
 
 	<FORM name="input" action="ReadBoxes.jsp" method="get">
 
@@ -34,10 +33,7 @@
 				</FORM>
 
 				<div id="ram">
-					<div id="map">MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP
-						MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP
-						MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP
-						MAP MAP MAP MAP MAP MAP MAP MAP MAP MAP</div>
+					<div id="map" style="width: 480px; height: 480px;"></div>
 
 					<!-- end of main-->
 				</div>
