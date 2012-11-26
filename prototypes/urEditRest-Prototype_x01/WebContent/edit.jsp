@@ -10,12 +10,15 @@
 	width: 30%;
 	float: left;
 	text-align: left;
+	
 }
 
 .right {
 	width: 50%;
 	margin-left: 10px;
 	float: right;
+	
+
 }
 </style>
 </head>
@@ -39,7 +42,8 @@
 
 
 	<form action="editServlet">
-		<div style="float:left;">
+		
+		<div style="float: left;">
 			<div>
 				<div class="left">Name</div>
 				<div class="right">
@@ -67,39 +71,40 @@
 					<input type="text" name="TelephoneNo">
 				</div>
 			</div>
-<div>
-			<div class="left">Email</div>
-			<div class="right">
-				<input type="text" name="Email">
+			<div>
+				<div class="left">Email</div>
+				<div class="right">
+					<input type="text" name="Email">
+				</div>
 			</div>
-		</div>
-		<div>
-			<div class="left">Homepage</div>
-			<div class="right">
-				<input type="text" name="Homepage">
+			<div>
+				<div class="left">Homepage</div>
+				<div class="right">
+					<input type="text" name="Homepage">
+				</div>
 			</div>
-		</div>
-		<div>
-			<div class="left">Description</div>
-			<div class="right">
-				<input type="text" name="Description">
+			<div>
+				<div class="left">Description</div>
+				<div class="right">
+					<input type="text" name="Description">
+				</div>
 			</div>
-		</div>
-		<div>
-			<div class="left">Opening</div>
-			<div class="right">
-				<input type="text" name="Opening">
+			<div>
+				<div class="left">Opening</div>
+				<div class="right">
+					<input type="text" name="Opening">
+				</div>
 			</div>
-		</div>
-		<div>
-			<div class="left">Closing</div>
-			<div class="right">
-				<input type="text" name="Closing">
+			<div>
+				<div class="left">Closing</div>
+				<div class="right">
+					<input type="text" name="Closing">
+				</div>
 			</div>
+			
 		</div>
-
-		</div>
-
+	<br><br><br><br><br><br><br><br><br><br>
+	<div class="left"><input type="submit" name= "submit" value ="Create / Edit"></div>
 
 
 

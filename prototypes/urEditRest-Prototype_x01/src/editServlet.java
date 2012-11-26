@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
  * +++urEditServlet+++
  * Description:This class acts like a middlehand between the jsp-file and the database to create or edit restaurants.
  * 		- Create or edit restaurants in the databse.
+ * 		- Checks if the textfields are empty. If so: redirects you to the edit.jsp again with correct errormessage.
  * 
  * The class can create any kind of restaurant, as long as valid data is inserted into the textfields.
  * 
@@ -50,6 +51,8 @@ public class editServlet extends HttpServlet {
 			session.removeAttribute("wrong");
 			response.sendRedirect("edit.jsp");
 			System.out.println("HEJ");
+			
+			//TODO add statement.
 		} else {
 			session.setAttribute("wrong", 1);
 			response.sendRedirect("edit.jsp");
