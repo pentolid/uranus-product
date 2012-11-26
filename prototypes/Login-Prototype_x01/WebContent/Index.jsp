@@ -6,6 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+	<script>
+function failLogin()
+{
+alert ("You have entered wrong login information. Please try again!");
+}
+</script>
 </head>
 <body>
 	<%
@@ -27,6 +33,11 @@
 			</tr>
 		</table>
 	</form>
+	<% if (request.getSession(true).getAttribute("failLogger") != null) {%>
+<script> failLogin() </script>
+<% System.out.println ("popup"); 
+session.setAttribute("failLogger", null);
+} %>
 	<%
 		} else {
 			out.println("Logged in as: " + session.getAttribute("userName")

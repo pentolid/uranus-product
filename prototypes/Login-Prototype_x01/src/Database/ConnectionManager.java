@@ -25,7 +25,7 @@ public abstract class ConnectionManager extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver"); // MySQL Driver
 			con = DriverManager.getConnection(
 					"jdbc:mysql://localhost/dbRdssLindholmen", "root",
-					"K0k0hand");
+					"squall");
 		} catch (Exception e) {
 			throw new UnavailableException(e.getMessage());
 		}

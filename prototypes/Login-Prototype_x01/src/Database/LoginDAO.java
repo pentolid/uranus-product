@@ -25,8 +25,8 @@ public class LoginDAO extends HttpServlet {
 		Statement stmt = null;
 		String username = bean.getUserName();
 		String password = bean.getPassword();
-		String searchQuery = "SELECT * FROM tblUsers WHERE uID='" + username
-				+ "' AND uPassword='" + password + "'";
+		String searchQuery = "SELECT * FROM tblUsers WHERE BINARY uID='" + username
+				+ "' AND BINARY uPassword='" + password + "'";
 		try {
 			// connecting to the DB
 			currentCon = ConnectionManager.getCon();
