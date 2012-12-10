@@ -136,10 +136,34 @@ a:link,a:active {
 	text-decoration: none;
 }
 
-a:hover {
-	color: red;
+ 
+a, a:visited{
+padding:4px 9px;
+background-color:#0;
+opacity:0.5;
+border-radius:3px;
+color:#cccccc;
+font-family:arial;
+text-decoration:none;
 }
 
-a:visited {
-	color: grey;
+a:hover{
+padding:4px 9px;
+background-color:#0;
+opacity:0.5;
+border-radius:3px;
+color:#ffffff;
+font-family:arial;
+text-decoration:none;
 }
+.dropdowndiv{
+width:90%;
+float:left;
+text-align:center;
+border-bottom: 1px solid #B1B1B1;
+padding:20px 5%;
+opacity:0.0;
+background-color:#000;
+margin:0px !important;
+display:none;
+} 

@@ -13,7 +13,21 @@
 <!-- Add fancyBox -->
 <link rel="stylesheet"
 	href="fancybox/source/jquery.fancybox.css?v=2.1.3" type="text/css"
-	media="screen" />
+	media="screen" />	
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function(){
+$("#show").click(function(){
+$(".dropdowndiv").slideDown(500);
+});
+
+$("#hide").click(function(){
+$(".dropdowndiv").slideUp(500);
+});
+
+});
+</script>
+	
 <script type="text/javascript"
 	src="fancybox/source/jquery.fancybox.pack.js?v=2.1.3"></script>
 	<!-- libraries needed for Google Maps API -->
@@ -70,6 +84,9 @@
 		<!-- content-->
 		<div id="content">
 			<div id="ram">
+			
+			<!-- DROPDOWN -->
+	<div class="dropdowndiv">	
 				<!-- menu--->
 				<div id="menu">
 				<!-- create checkboxes to set preferences -->
@@ -103,6 +120,9 @@
 					</form>
 					<!-- ### Not functional ###> -->
 				</div>
+				<a href="#" id="hide" title="Hide Div"><mi>Mindre</mi></a>
+				</div>
+			<a href="#" id="show" title="drop the div down"><mi>Mer</mi></a>
 			</div>
 			<!-- implement Google map -->
 			<div id="ram">
